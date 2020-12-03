@@ -37,9 +37,10 @@ public class TicTacToeGame {
 	{
 		for(int i=1;i<Board.length;i++)
 		{
-			System.out.println(Board[i]);
+			System.out.println("|_"+Board[i]+"_|");
+
 			if(i%3==0)
-				System.lineSeparator();
+				System.out.println(System.lineSeparator());
 		}
 	}
 	public static void main(String[] args)
