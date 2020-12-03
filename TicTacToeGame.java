@@ -32,10 +32,21 @@ public class TicTacToeGame {
 		}
 		return Computer;
 	}
+//UC3
+	public static void ShowBoard(char[] Board)
+	{
+		for(int i=1;i<Board.length;i++)
+		{
+			System.out.println(Board[i]);
+			if(i%3==0)
+				System.lineSeparator();
+		}
+	}
 	public static void main(String[] args)
 	{
 		char[] board=gameBoard();
 		String input=inputBoard();
+		ShowBoard(board);
 	}
 
 }
