@@ -43,12 +43,28 @@ public class TicTacToeGame {
 				System.out.println(System.lineSeparator());
 		}
 	}
+//UC4
+	public static int userChoice(char[] Board,Scanner userInput)
+	{
+		Integer[] validCells = {1,2,3,4,5,6,7,8,9};
+		while(true)
+		{
+			System.out.println("what is your next move? (1-9):");
+			int index = userInput.nextInt();
+			if(Arrays.asList(validCells).contains(index) && isSpaceFree(Board,index))
+				return index;
+		}
+	}
 	public static void main(String[] args)
 	{
+		String Player=null;
+		String Computer=null;
 		char[] board=gameBoard();
-		String input=inputBoard();
+		String[] input=inputBoard(Player,Computer);
 		ShowBoard(board);
+		int userChoice=userChoice(board,userInput);
 	}
+	
 
 }
 
